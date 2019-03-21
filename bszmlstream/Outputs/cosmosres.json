@@ -1,0 +1,24 @@
+﻿{
+  "EventHubProperties": null,
+  "BlobStorageProperties": null,
+  "SQLDatabaseProperties": null,
+  "TableStorageProperties": null,
+  "ServiceBusQueueProperties": null,
+  "ServiceBusTopicProperties": null,
+  "DocumentDbProperties": {
+    "AccountId": "bsziotcosmos",
+    "AccountKey": null,
+    "CollectionNamePattern": "ikortdata",
+    "Database": "iotData",
+    "DocumentId": null,
+    "PartitionKey": null
+  },
+  "PowellBIProperties": null,
+  "AzureDataLakeStoreProperties": null,
+  "AzureFunctionProperties": null,
+  "DataSourceCredentialDomain": null,
+  "Name": "cosmosres",
+  "DataSourceType": "DocumentDB",
+  "Serialization": null,
+  "ScriptType": "Output"
+}

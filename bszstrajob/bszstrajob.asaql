@@ -1,0 +1,17 @@
+﻿SELECT 
+        *
+INTO    outblob
+from dsensor
+
+select
+temperature,
+knob,
+humidity,
+distance,
+EventProcessedUtcTime,
+PartitionId,
+EventEnqueuedUtcTime
+INTO 
+PBIout 
+FROM 
+dsensor

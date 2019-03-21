@@ -1,0 +1,36 @@
+﻿{
+  "EventHubProperties": null,
+  "BlobStorageProperties": {
+    "Container": "iotfiles",
+    "DateFormat": "yyyy/MM/dd",
+    "PathPattern": "",
+    "StorageAccounts": [
+      {
+        "AccountKey": null,
+        "AccountName": "bszedgedemodiag"
+      }
+    ],
+    "TimeFormat": "HH"
+  },
+  "SQLDatabaseProperties": null,
+  "TableStorageProperties": null,
+  "ServiceBusQueueProperties": null,
+  "ServiceBusTopicProperties": null,
+  "DocumentDbProperties": null,
+  "PowellBIProperties": null,
+  "AzureDataLakeStoreProperties": null,
+  "AzureFunctionProperties": null,
+  "DataSourceCredentialDomain": "cd42fe86-3f71-44ee-9f50-c1e5f82cd39c.StreamAnalyticsCredential",
+  "Name": "outblob",
+  "DataSourceType": "Blob Storage",
+  "Serialization": {
+    "Encoding": "UTF8",
+    "Type": "Json",
+    "FieldDelimiter": null,
+    "Format": "LineSeparated",
+    "SerializationDllPath": null,
+    "SerializationClassName": null,
+    "SerializationDllPathInLocal": null
+  },
+  "ScriptType": "Output"
+}

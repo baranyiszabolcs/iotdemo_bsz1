@@ -1,0 +1,29 @@
+﻿{
+  "Sample": "{\"machine\":{\"temperature\":27.123427349549452,\"pressure\":1.697605647417026},\"ambient\":{\"temperature\":20.570011831386953,\"humidity\":26},\"timeCreated\":\"2019-02-26T13:13:39.8851322Z\"}",
+  "EventHubProperties": null,
+  "BlobStorageProperties": null,
+  "IoTHubProperties": {
+    "ConsumerGroupName": "$Default",
+    "IotHubNamespace": "bsziothub",
+    "SharedAccessPolicyKey": null,
+    "SharedAccessPolicyName": "iothubowner",
+    "EndPoint": "messages/events"
+  },
+  "BlobReferenceProperties": null,
+  "SqlReferenceInputInfo": null,
+  "DataSourceCredentialDomain": "5325df64-a509-4c67-8f96-89e94a00ff76.StreamAnalyticsCredential",
+  "Name": "dsensor",
+  "Type": "Data Stream",
+  "DataSourceType": "IoT Hub",
+  "Serialization": {
+    "Encoding": "UTF8",
+    "Type": "Json",
+    "FieldDelimiter": null,
+    "Format": null,
+    "SerializationDllPath": null,
+    "SerializationClassName": null,
+    "SerializationDllPathInLocal": null
+  },
+  "CompresssionType": "None",
+  "ScriptType": "Input"
+}

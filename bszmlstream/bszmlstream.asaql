@@ -1,0 +1,62 @@
+﻿WITH AnomalyDetectionStep AS
+(
+    SELECT
+        temperature,
+        humidity,
+        timeCreated,
+        messageId,
+        EVENTENQUEUEDUTCTIME AS time,
+        CAST(temperature AS float) AS temp,
+        AnomalyDetection_SpikeAndDip(CAST(temperature AS float), 95, 10, 'spikesanddips')
+            OVER(LIMIT DURATION(second, 10)) AS SpikeAndDipScores
+    FROM ikort
+    WHERE IoTHub.ConnectionDeviceId ='ikort'  
+)
+SELECT
+    temperature,
+    humidity,
+    timeCreated,
+    messageId,
+    time,
+    temp,
+    CAST(GetRecordPropertyValue(SpikeAndDipScores, 'Score') AS float) AS
+    SpikeAndDipScore,
+    CAST(GetRecordPropertyValue(SpikeAndDipScores, 'IsAnomaly') AS bigint) AS
+    IsSpikeAndDipAnomaly
+INTO ikortml
+FROM AnomalyDetectionStep
+
+SELECT
+    temperature,
+    humidity,
+    timeCreated,
+    messageId,
+    time,
+    temp,
+    CAST(GetRecordPropertyValue(SpikeAndDipScores, 'Score') AS float) AS
+    SpikeAndDipScore,
+    CAST(GetRecordPropertyValue(SpikeAndDipScores, 'IsAnomaly') AS bigint) AS
+    IsSpikeAndDipAnomaly,
+    mla2(temperature,
+    humidity,
+    timeCreated,
+    messageId,
+    time,
+    temp,
+    CAST(GetRecordPropertyValue(SpikeAndDipScores, 'Score') AS float) ,
+    CAST(GetRecordPropertyValue(SpikeAndDipScores, 'IsAnomaly') AS bigint) )  as anomalyml
+INTO cosmosres
+FROM AnomalyDetectionStep
+/*
+SELECT
+    temperature,
+    humidity,
+    timeCreated,
+    messageId,
+    IoTHub.ConnectionDeviceId
+INTO
+   ikortml
+FROM
+   ikort
+WHERE IoTHub.ConnectionDeviceId ='ikort';   
+*/

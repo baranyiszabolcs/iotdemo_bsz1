@@ -1,0 +1,29 @@
+﻿{
+  "Sample": null,
+  "EventHubProperties": null,
+  "BlobStorageProperties": null,
+  "IoTHubProperties": {
+    "ConsumerGroupName": "$Default",
+    "IotHubNamespace": "bsziothub",
+    "SharedAccessPolicyKey": null,
+    "SharedAccessPolicyName": "service",
+    "EndPoint": "messages/events"
+  },
+  "BlobReferenceProperties": null,
+  "SqlReferenceInputInfo": null,
+  "DataSourceCredentialDomain": "350fc3a4-0127-47cb-9152-480d4b948ee7.StreamAnalyticsCredential",
+  "Name": "dsensor",
+  "Type": "Data Stream",
+  "DataSourceType": "IoT Hub",
+  "Serialization": {
+    "Encoding": "UTF8",
+    "Type": "Json",
+    "FieldDelimiter": null,
+    "Format": null,
+    "SerializationDllPath": null,
+    "SerializationClassName": null,
+    "SerializationDllPathInLocal": null
+  },
+  "CompresssionType": "None",
+  "ScriptType": "Input"
+}

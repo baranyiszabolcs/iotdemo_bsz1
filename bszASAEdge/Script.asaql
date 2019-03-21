@@ -1,0 +1,3 @@
+﻿SELECT machine.temperature, udf.bszASAEdge_DistanceUDf_DistanceAlert(try_cast(machine.temperature as bigint)) as dalert
+    INTO Output
+    FROM Input

@@ -1,0 +1,111 @@
+﻿{
+  "URL": "https://europewest.services.azureml.net/subscriptions/4a99ad0b5a1c46f4bea8e81845b5a94e/services/2e461f5039bf48cda370067e2998586a/execute?api-version=2.0&details=true",
+  "Key": null,
+  "BatchSize": 1000,
+  "CredentialDomain": null,
+  "MLInputs": {
+    "ColumnNames": [
+      {
+        "DataType": "Int32",
+        "MapTo": 0,
+        "Name": "temperature"
+      },
+      {
+        "DataType": "Int32",
+        "MapTo": 1,
+        "Name": "humidity"
+      },
+      {
+        "DataType": "Date-time",
+        "MapTo": 2,
+        "Name": "timecreated"
+      },
+      {
+        "DataType": "Int32",
+        "MapTo": 3,
+        "Name": "messageid"
+      },
+      {
+        "DataType": "Date-time",
+        "MapTo": 4,
+        "Name": "time"
+      },
+      {
+        "DataType": "Int32",
+        "MapTo": 5,
+        "Name": "temp"
+      },
+      {
+        "DataType": "Double",
+        "MapTo": 6,
+        "Name": "spikeanddipscore"
+      },
+      {
+        "DataType": "Int32",
+        "MapTo": 7,
+        "Name": "isspikeanddipanomaly"
+      }
+    ],
+    "Name": "input1"
+  },
+  "MLOutputs": [
+    {
+      "DataType": "Int32",
+      "Name": "temperature"
+    },
+    {
+      "DataType": "Int32",
+      "Name": "humidity"
+    },
+    {
+      "DataType": "Int32",
+      "Name": "spanomaly"
+    },
+    {
+      "DataType": "Double",
+      "Name": "Scored Labels"
+    },
+    {
+      "DataType": "Double",
+      "Name": "Scored Probabilities"
+    }
+  ],
+  "Name": "mla",
+  "OutputType": "record",
+  "Type": "Scalar",
+  "FunctionInputs": [
+    {
+      "DataType": "bigint",
+      "IsConfigurationParameter": null
+    },
+    {
+      "DataType": "bigint",
+      "IsConfigurationParameter": null
+    },
+    {
+      "DataType": "datetime",
+      "IsConfigurationParameter": null
+    },
+    {
+      "DataType": "bigint",
+      "IsConfigurationParameter": null
+    },
+    {
+      "DataType": "datetime",
+      "IsConfigurationParameter": null
+    },
+    {
+      "DataType": "bigint",
+      "IsConfigurationParameter": null
+    },
+    {
+      "DataType": "float",
+      "IsConfigurationParameter": null
+    },
+    {
+      "DataType": "bigint",
+      "IsConfigurationParameter": null
+    }
+  ],
+  "ScriptType": "MLFunction"
+}

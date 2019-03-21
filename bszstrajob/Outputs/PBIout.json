@@ -1,0 +1,25 @@
+﻿{
+  "EventHubProperties": null,
+  "BlobStorageProperties": null,
+  "SQLDatabaseProperties": null,
+  "TableStorageProperties": null,
+  "ServiceBusQueueProperties": null,
+  "ServiceBusTopicProperties": null,
+  "DocumentDbProperties": null,
+  "PowellBIProperties": {
+    "RefreshToken": null,
+    "TokenUserPrincipalName": "szbarany@microsoft.com",
+    "TokenUserDisplayName": "Szabolcs Baranyi",
+    "Dataset": "IotRealData",
+    "Table": "dsensors",
+    "GroupId": "fcb869f6-4b47-428f-a9c4-d27543b64923",
+    "GroupName": "bszdemokit"
+  },
+  "AzureDataLakeStoreProperties": null,
+  "AzureFunctionProperties": null,
+  "DataSourceCredentialDomain": null,
+  "Name": "PBIout",
+  "DataSourceType": "Power BI",
+  "Serialization": null,
+  "ScriptType": "Output"
+}
